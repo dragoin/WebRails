@@ -1,0 +1,17 @@
+<h1>Vítejte!</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+
+<h1>Ahoj, Rails!</h1> 
+<h2>Users</h2>
+<div class="menu">
+<%=link_to image_tag("/obrazky/spletenec.png"), {:action => 'index', :controller => 'posts'}, {:class => 'spletenec'} %>
+
+
+<%=link_to image_tag("/obrazky/tl.png"), {:action => 'index', :controller => 'home'}, {:class => 'spletenec'} %>
+
+<%=link_to image_tag("/obrazky/tl.png"), {:action => 'index', :controller => 'home'}, {:class => 'spletenec'} %>
+</div>
+
+<%= link_to "Můj blog", posts_path %> 
+
+

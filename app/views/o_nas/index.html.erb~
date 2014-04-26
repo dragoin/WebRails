@@ -1,0 +1,5 @@
+
+<h1>Ahoj, Rails!</h1> 
+<%= @a %>
+
+<%= render :o_nas#index %>

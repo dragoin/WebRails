@@ -1,0 +1,21 @@
+<h1> Todoo items </h1>
+
+<h2>Todo:</h2>
+<% @todos.each do |t| %>
+	<p>
+		<%= t.name %>
+		<%= link_to "Dokončeno", todo_path(t), :method => :put %>
+	</p>
+<%end%>
+<h2>Todone:</h2>
+<% @todone.each do |t| %>
+	<p>t
+		<%= t.name %>
+		<%= link_to "Odstraň",t , :confirm => "Chces odstranit?", :method => :delete%>
+	</p>
+<%end%>
+<p>
+<%= link_to "Vytvoř nový", new_todo_path%>
+<%= link_to "Stáhni soubor", :method => :download %>
+<%= link_to "Stáhni soubor pdf", todos_download_pdf_path %>
+</p>

@@ -1,0 +1,6 @@
+<h1> Add new item to your todoo list</h1>
+<%= form_for @todo do |f|%>
+	<%= f.label :name %>: <%= f.text_field :name%>
+	<%= f.hidden_field :done, :value => false%>
+	<%= f.submit "Přidej"%>
+<% end %>

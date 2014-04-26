@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  <script language="javascript" type="text/javascript" src="/assers/javascripts/jquery-1.11.0.js"></script>
+   <script language="javascript" type="text/javascript" src="/assers/javascripts/zkouska.js"></script>
+</head>
+<body>
+
+
+<div  id="ahoj">Ahoj! <br> Dobrý den</div>
+<div id="login">
+<% if user_signed_in? %>
+You are signed <%= current_user.email %>, sign out: <%= link_to "Odhlásit", destroy_user_session_path, :method => :delete %>
+<% else %>
+<%= link_to "Sign up!", new_user_registration_path %> or <%= link_to "Sign in", new_user_session_path %>
+<% end %>	
+
+</div>
+<div class="menu">
+<%=link_to image_tag("/obrazky/spletenec.png"), {:action => 'index', :controller => 'home'}, {:class => 'spletenec'} %>
+
+
+<%=link_to image_tag("/obrazky/tl.png"), {:action => 'index', :controller => 'home'}, {:class => 'spletenec'} %>
+
+<%=link_to image_tag("/obrazky/tl.png"), {:action => 'index', :controller => 'home'}, {:class => 'spletenec'} %>
+</div>
+<div class="conteiner">
+
+<%= yield %>
+</div>
+
+
+
+</body>
+</html>
